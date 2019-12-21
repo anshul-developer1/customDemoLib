@@ -12,7 +12,9 @@ android {
         multiDexEnabled true
         versionName "2.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "FIREBASE_APP_KEY", "\"${firebaseAppKey}\"")
     }
+
     buildTypes {
         release {
             minifyEnabled false
