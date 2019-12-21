@@ -21,6 +21,7 @@ import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.Mult
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.AuthenticationHandler
 import com.amazonaws.regions.Regions
 import com.google.firebase.FirebaseApp
+import com.google.firebase.FirebaseOptions
 import java.util.regex.Pattern
 import com.google.firebase.iid.FirebaseInstanceId
 
@@ -180,7 +181,13 @@ class GlobalMethods {
         return isEmail
     }
 
-    fun getDeviceToken() {
+    fun getDeviceToken(context : Context?) {
+
+         //var secondApp = FirebaseApp.initializeApp(context!!, options, "second app");
+
+
+
+
         FirebaseInstanceId.getInstance().instanceId.addOnCompleteListener { task ->
             if (task.isSuccessful)
                 PrefKeeper.deviceToken = task.result!!.token

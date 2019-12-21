@@ -53,7 +53,7 @@ class HomeActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(com.aeropay_merchant.R.layout.activity_home)
         initialiseControls()
-        GlobalMethods().getDeviceToken()
+        GlobalMethods().getDeviceToken(applicationContext)
         setupView()
         setListeners()
 /*
