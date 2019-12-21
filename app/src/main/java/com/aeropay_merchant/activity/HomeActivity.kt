@@ -33,6 +33,7 @@ import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.widget.ListView
 import com.aeropay_merchant.adapter.HomeCardRecyclerView
+import com.google.firebase.FirebaseOptions
 
 
 class HomeActivity : BaseActivity() {
@@ -53,6 +54,12 @@ class HomeActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(com.aeropay_merchant.R.layout.activity_home)
         initialiseControls()
+
+        var options =  FirebaseOptions.Builder()
+            .setApiKey("AIzaSyBy5X8s5FMClItX4FzhuzfeZX7LkRgpH3U")
+            .setApplicationId("1:812992319148:android:65840eb18b72b4ca")
+            .build()
+
         GlobalMethods().getDeviceToken(applicationContext)
         setupView()
         setListeners()
