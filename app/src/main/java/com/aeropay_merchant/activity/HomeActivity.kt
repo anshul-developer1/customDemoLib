@@ -55,11 +55,11 @@ class HomeActivity : BaseActivity() {
         setContentView(com.aeropay_merchant.R.layout.activity_home)
         initialiseControls()
 
-        var options =  FirebaseOptions.Builder()
+        /*var options =  FirebaseOptions.Builder()
             .setApiKey("AIzaSyBy5X8s5FMClItX4FzhuzfeZX7LkRgpH3U")
             .setApplicationId("1:812992319148:android:65840eb18b72b4ca")
             .build()
-
+*/
         GlobalMethods().getDeviceToken(applicationContext)
         setupView()
         setListeners()
