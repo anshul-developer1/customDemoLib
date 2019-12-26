@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.aeropay_merchant"
     android:targetSandboxVersion="1">
 
@@ -12,33 +13,35 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name=".APApplication"
+        android:label="@string/app_name"
         android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
         android:hardwareAccelerated="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <service
-            android:name=".Utilities.MyFirebaseMessagingService">
+            android:name=".Utilities.MyFirebaseMessagingService_APSDK">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        <activity android:name=".activity.PinEnterActivity" />
+        <activity android:name=".activity.PinEnterActivity_APSDK" />
         <activity
-            android:name=".activity.HomeActivity"
+            android:name=".activity.HomeActivity_APSDK"
             android:launchMode="singleTask" />
-        <activity android:name=".activity.FastLoginActivity" />
+        <activity android:name=".activity.FastLoginActivity_APSDK" />
         <activity
-            android:name=".activity.SettingsScreenActivity"
+            android:name=".activity.SettingsScreenActivity_APSDK"
             android:configChanges="orientation|screenSize|keyboardHidden" />
-        <activity android:name=".activity.NavigationMenuActivity" />
+        <activity android:name=".activity.NavigationMenuActivity_APSDK" />
         <activity
             android:name=".activity.BaseActivity"
             android:configChanges="orientation|screenSize|keyboardHidden" />
-        <activity android:name=".activity.SignInCredentialActivity" />
-        <activity android:name=".activity.SignInScreenActivity" />
-        <activity android:name=".activity.SplashActivity">
+        <activity android:name=".activity.SignInCredentialActivity_APSDK" />
+        <activity android:name=".activity.SignInScreenActivity_APSDK" />
+        <activity android:name=".activity.SplashActivity_APSDK">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
